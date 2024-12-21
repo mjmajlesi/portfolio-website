@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react'
 
 function Container({children} : {children : ReactNode}) {
   return (
-    <div className='mx-32'>
+    <div className='mx-24'>
         {children}
     </div>
   )

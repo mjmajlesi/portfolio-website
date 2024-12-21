@@ -2,12 +2,11 @@ import React from "react";
 import Container from "./Container";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import Button from "./buttuns";
-import logo from "../assets/photo_2024-07-10_04-59-49.jpg"
 
 function Navbar() {
   const navs = [
     {
-      path: "#home",
+      path: "/",
       name: "Home",
     },
     {
@@ -24,26 +23,27 @@ function Navbar() {
     },
   ];
   return (
-    <div>
+    <div className="Navbar">
       <Container>
-        <div className="flex justify-between items-center mt-2">
-          <img src={logo} alt="logo"
-          className="rounded-2xl" width="40px" />
+        <div className="flex justify-between items-center mt-5 text-lg">
+          <p className="font-semibold text-2xl ">MJ</p>
           <ul className="flex gap-10 items-center">
-            {
-              navs.map((nav , index) => (
-              <AnchorLink
-                key={index}
-                className="anchor-link"
-                offset={50}
-                href={nav.path}
-              >{nav.name}</AnchorLink>
-            ))
-            }
+            {navs.map((nav, index) => (
+              <li className="active:text-Blue">
+                <AnchorLink
+                  key={index}
+                  className="anchor-link hover:text-Blue"
+                  offset={50}
+                  href={nav.path}
+                >
+                  {nav.name}
+                </AnchorLink>
+              </li>
+            ))}
           </ul>
-          <Button variant="login">
-            Login
-          </Button>
+          <div className="Login">
+            <Button variant="login" className="transition delay-150 hover:scale-110 ">Login</Button>
+          </div>
         </div>
       </Container>
     </div>

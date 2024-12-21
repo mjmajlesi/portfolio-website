@@ -7,7 +7,11 @@ export default {
   theme: {
     extend: {
       backgroundColor : {
-        "asli" : "#010211"
+        "main" : "#010211",
+        "Blue" : "#1e98d5"
+      },
+      textColor : {
+        "Blue" : "#1e98d5"
       }
     },
   },
