@@ -41,8 +41,8 @@ function Navbar() {
               </li>
             ))}
           </ul>
-          <div className="Login">
-            <Button variant="login" className="transition delay-150 hover:scale-110 ">Login</Button>
+          <div className="Login" >
+            <Button className=" bg-gradient-to-r from-[#1d1d9a] to-[#1e98d5] transition delay-150 hover:scale-110 ">Login</Button>
           </div>
         </div>
       </Container>
