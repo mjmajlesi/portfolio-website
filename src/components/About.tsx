@@ -66,7 +66,7 @@ const About = () => {
 };
 
 
-const StyleSvg = styled.svg`
+export const StyleSvg = styled.svg`
   position: absolute;
   top: -45px;
   left: 830px ;  

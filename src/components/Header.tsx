@@ -52,7 +52,7 @@ const StyledImage = styled.img`
 }
 ` ;
 
-const DivtopBlur = styled.div`
+export const DivtopBlur = styled.div`
     position: absolute;
     width: 25vw;
     height: 25vw;
@@ -65,7 +65,7 @@ const DivtopBlur = styled.div`
     filter: blur(100px);
     z-index: 0;
 `
-const DivbotBlur = styled.div`
+export const DivbotBlur = styled.div`
     position: absolute;
     width: 20vw;
     height: 20vw;
