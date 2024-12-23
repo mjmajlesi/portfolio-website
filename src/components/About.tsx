@@ -8,7 +8,7 @@ import { IoLogoJavascript } from "react-icons/io";
 
 const About = () => {
   return (
-    <div>
+    <div id="aboutme">
       <Container>
         <div className=" relative head-about flex flex-col items-center justify-center">
           <h2 className="text-4xl font-medium z-10 ">
