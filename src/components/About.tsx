@@ -5,6 +5,7 @@ import { FaCss3, FaHtml5, FaReact } from "react-icons/fa";
 import { IconContext } from "react-icons";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { IoLogoJavascript } from "react-icons/io";
+import imgprof from "../assets/Prof.jpg";
 
 const About = () => {
   return (
@@ -20,7 +21,7 @@ const About = () => {
         </div>
         <div className=" my-20 flex justify-around items-center ">
           <div>
-            <img src={""} width={300} alt="imageBio" />
+            <img src={imgprof} className="rounded-xl" width={350} alt="imageBio" />
           </div>
           <div>
             <p className="max-w-[700px] mb-10 font-medium text-[18px] leading-[26px]">

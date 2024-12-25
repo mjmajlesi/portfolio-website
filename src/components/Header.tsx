@@ -6,7 +6,7 @@ import styled from 'styled-components';
 const Header = () => {
   return (
     <Container>
-    <div className='Header flex justify-center flex-col items-center my-24'>
+    <div className='Header flex justify-center flex-col items-center mt-36 mb-24'>
         <StyledImage src={profile} className='rounded-full' width={200} alt="profile" />
         <div className='Header-bio flex items-center justify-center flex-col my-14'>
             <p className='text-[40px] font-semibold '>
