@@ -20,7 +20,7 @@ const Header = () => {
             <Button variant='normal' className='p-4 rounded-2xl'>
                 connect with me 
             </Button>
-            <Button className=' p-4 active:rounded-2xl active:border-2 active:border-white'>
+            <Button className=' p-4 active:rounded-2xl active:border-2 hover:border-[#1e98d5]'>
                 my resume
             </Button>
         </div>
