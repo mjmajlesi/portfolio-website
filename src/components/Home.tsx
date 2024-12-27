@@ -6,10 +6,10 @@ import Connect from './Connect'
 function Home() {
   return (
     <div className='flex flex-col gap-40'>
-      <Header />
-      <About />
-      <Mywork />
-      <Connect />
+        <Header />
+        <About />
+        <Mywork />
+        <Connect />
     </div>
   )
 }

@@ -4,10 +4,19 @@ import image1 from "../assets/image1.png";
 import image2 from "../assets/image2.png";
 import { StyleSvg } from "./About";
 import Container from "./Container";
+import {motion} from "framer-motion"
 
 const Mywork = () => {
   return (
-    <div id="work">
+    <motion.div
+    initial={{ opacity: 0, y: 100 }}
+    whileInView={{
+        opacity: 1,
+        y: 1,
+        transition: { delay: 0.2, duration: 0.6 },
+    }}
+    viewport={{ once: true, amount: 0.5 }}
+    id="work">
       <Container>
         <div className="title-work relative flex flex-col items-center justify-center">
           <h2 className="text-4xl z-10 font-medium">My Work</h2>
@@ -50,7 +59,7 @@ const Mywork = () => {
           </div>
         </div>
       </Container>
-    </div>
+    </motion.div>
   );
 };
 

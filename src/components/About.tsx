@@ -6,10 +6,19 @@ import { IconContext } from "react-icons";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { IoLogoJavascript } from "react-icons/io";
 import imgprof from "../assets/Prof.jpg";
+import {motion} from "framer-motion";
 
 const About = () => {
   return (
-    <div id="aboutme">
+    <motion.div
+    initial={{ opacity: 0, y: 100 }}
+    whileInView={{
+        opacity: 1,
+        y: 1,
+        transition: { delay: 0.2, duration: 0.6 },
+    }}
+    viewport={{ once: true, amount: 0.5 }}
+    id="aboutme">
       <Container>
         <div className=" relative head-about flex flex-col items-center justify-center">
           <h2 className="text-4xl font-medium z-10 ">
@@ -62,7 +71,7 @@ const About = () => {
           </div>
         </div>
       </Container>
-    </div>
+    </motion.div>
   );
 };
 

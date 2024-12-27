@@ -5,4 +5,5 @@
 body {
   @apply bg-main text-white text-base;
   font-family: "Poppins", serif;
+  height: 100vh;
 }

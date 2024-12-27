@@ -1,4 +1,3 @@
-import React from 'react'
 import imgconnect from "../assets/download.svg" ;
 import styled from 'styled-components';
 import { IoCall } from 'react-icons/io5';
@@ -7,10 +6,19 @@ import { FaLocationDot } from 'react-icons/fa6';
 import { IconContext } from 'react-icons';
 import Button from './buttuns';
 import Container from './Container';
+import {motion} from "framer-motion";
 
 const Connect = () => {
   return (
-    <div id='content'>
+    <motion.div 
+    initial={{ opacity: 0, y: 100 }}
+    whileInView={{
+        opacity: 1,
+        y: 1,
+        transition: { delay: 0.2, duration: 0.6 },
+    }}
+    viewport={{ once: true, amount: 0.5 }}
+    id='content'>
       <div className='title-connect relative flex flex-col items-center mb-20'>
         <h2 className='text-4xl font-medium z-10'>Content with me</h2>
         <StyleSvg>
@@ -56,7 +64,7 @@ const Connect = () => {
         </div>
       </div>
     </Container>
-    </div>
+    </motion.div>
   )
 }
 
