@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import Container from "./Container";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import Button from "./buttuns";
@@ -22,12 +22,24 @@ function Navbar() {
       name: "Work",
     },
   ];
+
+  const [isNavOpen , setIsNavOpen] = useState(false);
+
+  const toggleNav = () => setIsNavOpen(!isNavOpen);
+
   return (
     <div className="Navbar">
       <Container>
-        <div className="flex justify-between items-center mt-5 text-lg">
+        <div className="flex flex-col items-start md:flex-row md:items-center md:justify-between mt-5 text-lg">
           <p className="font-semibold text-2xl ">MJ</p>
-          <ul className="flex gap-10 items-center">
+          <div 
+          onClick={toggleNav}
+          className="absolute t0p-[0.75rem] right-[3rem] md:hidden flex flex-col justify-between w-[2.25rem] h-[2rem]">
+            <span className="h-[0.4rem] w-full bg-white rounded-md"></span>
+            <span className="h-[0.4rem] w-full bg-white rounded-md"></span>
+            <span className="h-[0.4rem] w-full bg-white rounded-md"></span>
+          </div>
+          <ul className={` ${ isNavOpen ? "hidden" : "flex" } md:flex flex-col md:flex-row gap-4 md:gap-10 items-center absolute md:relative top-16 md:top-0 left-0 w-full md:w-auto bg-gray-900 md:bg-transparent p-5 md:p-0`}>
             {navs.map((nav, index) => (
               <li className="active:text-Blue">
                 <AnchorLink
@@ -41,7 +53,7 @@ function Navbar() {
               </li>
             ))}
           </ul>
-          <div className="Login" >
+          <div className="Login max-md:hidden" >
             <Button className=" bg-gradient-to-r from-[#1d1d9a] to-[#1e98d5] transition delay-150 hover:scale-110 ">Login</Button>
           </div>
         </div>
