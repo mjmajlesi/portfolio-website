@@ -23,18 +23,18 @@ function Navbar() {
     },
   ];
 
-  const [isNavOpen , setIsNavOpen] = useState(false);
+  const [isNavOpen , setIsNavOpen] = useState(true);
 
   const toggleNav = () => setIsNavOpen(!isNavOpen);
 
   return (
-    <div className="Navbar">
+    <div className={`${isNavOpen ? "Navbar" : "mb-24"}`}>
       <Container>
         <div className="flex flex-col items-start md:flex-row md:items-center md:justify-between mt-5 text-lg">
           <p className="font-semibold text-2xl ">MJ</p>
           <div 
           onClick={toggleNav}
-          className="absolute t0p-[0.75rem] right-[3rem] md:hidden flex flex-col justify-between w-[2.25rem] h-[2rem]">
+          className="absolute t0p-[0.75rem] right-[1rem] md:hidden flex flex-col justify-between w-[2.25rem] h-[2rem]">
             <span className="h-[0.4rem] w-full bg-white rounded-md"></span>
             <span className="h-[0.4rem] w-full bg-white rounded-md"></span>
             <span className="h-[0.4rem] w-full bg-white rounded-md"></span>
