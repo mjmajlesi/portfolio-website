@@ -26,9 +26,9 @@ const Connect = () => {
         </svg>
       </div>
       <Container>
-      <div className='flex items-center justify-around mb-32'>
-        <div className='flex flex-col justify-center items-start gap-9 w-[600px]'>
-          <h3 className='text-4xl font-semibold bg-gradient-to-r from-[#1d1d9a] to-[#1e98d5] bg-clip-text text-transparent'>Lets talk...</h3>
+      <div className='flex flex-col md:flex-row justify-center items-center md:justify-around mb-32'>
+        <div className='flex flex-col justify-center items-start gap-9 mb-40 w-[300] md:w-[600px]'>
+          <h3 className='text-4xl font-semibold bg-gradient-to-r from-[#1d1d9a] to-[#1e98d5] bg-clip-text max-md:text-center max-md:w-full text-transparent'>Lets talk...</h3>
           <p className='text-lg my-4'>
           I would be happy if I could collaborate on a new project or be hired by a company (remotely). Contact information :
           </p>
@@ -53,12 +53,12 @@ const Connect = () => {
         <div>
         <form action="">
           <label htmlFor="Name" className='block mb-4 font-medium'>Your name :</label>
-          <input type="text" id='Name' className='w-[645px] h-10 bg-slate-700 mb-7 rounded-lg p-4 focus:outline-none focus:outline-[#1e98d5] ' placeholder='Name...' />
+          <input type="text" id='Name' className='md:w-[645px] h-10 bg-slate-700 mb-7 rounded-lg p-4 focus:outline-none focus:outline-[#1e98d5] ' placeholder='Name...' />
           <label htmlFor="Email" className='block mb-4 font-medium'>Your email :</label>
-          <input type="email" id='Email' className='w-[645px] h-10 bg-slate-700 mb-7 rounded-lg p-4 focus:outline-none focus:outline-[#1e98d5] ' placeholder='Email...' />
+          <input type="email" id='Email' className='md:w-[645px] h-10 bg-slate-700 mb-7 rounded-lg p-4 focus:outline-none focus:outline-[#1e98d5] ' placeholder='Email...' />
 
           <label htmlFor="Comment" className='block mb-4 font-medium'>Your comment :</label>
-          <textarea rows={8} id="Comment" className='w-[645px] bg-slate-700 mb-7 rounded-lg p-4 focus:outline-none focus:outline-[#1e98d5] ' placeholder='Enter your massege...'></textarea>
+          <textarea rows={8} id="Comment" className='md:w-[645px] bg-slate-700 mb-7 rounded-lg p-4 focus:outline-none focus:outline-[#1e98d5] ' placeholder='Enter your massege...'></textarea>
           <Button className=' flex items-start text-xl p-3 bg-gradient-to-r from-[#1d1d9a] to-[#1e98d5] transition delay-150 hover:scale-110 ' type='submit'>Submit</Button>
          </form>
         </div>
