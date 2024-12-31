@@ -21,7 +21,7 @@ const Connect = () => {
     id='content'>
       <div className='title-connect relative flex flex-col items-center mb-20'>
         <h2 className='text-4xl font-medium z-10'>Content with me</h2>
-        <svg className=" max-xl:hidden absolute top-[-45px] left-[830px] z-0"> {/* watch video */}
+        <svg className=" max-xl:hidden absolute top-[-45px] left-[990px] z-0"> {/* watch video */}
         <image height={150} width={130} href={imgconnect} />
         </svg>
       </div>
