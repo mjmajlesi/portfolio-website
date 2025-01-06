@@ -14,7 +14,7 @@ const Mywork = () => {
         y: 1,
         transition: { delay: 0.2, duration: 0.6 },
     }}
-    viewport={{ once: true, amount: 0.5 }}
+    viewport={{ once: false, amount: 0.5 }}
     id="work">
       <Container>
         <div className="title-work relative flex flex-col items-center justify-center">

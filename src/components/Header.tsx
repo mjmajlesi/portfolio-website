@@ -4,6 +4,7 @@ import Container from './Container';
 import Button from './buttuns';
 import styled from 'styled-components';
 import {motion} from "framer-motion";
+import Navbar from "./Navbar";
 const Header = () => {
 
   const typeanimation = [
@@ -12,6 +13,8 @@ const Header = () => {
   ];
 
   return (
+    <>
+    <Navbar />
     <Container>
     <div className='Header flex justify-center flex-col items-center mt-36 mb-24'>
         <StyledImage src={profile} className='rounded-full' width={200} alt="profile" />
@@ -47,6 +50,7 @@ const Header = () => {
         <DivbotBlur />
     </div>
     </Container>
+    </>
   )
 }
 
