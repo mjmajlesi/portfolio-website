@@ -23,11 +23,11 @@ const About = () => {
           <h2 className="text-4xl font-medium z-10 ">
             About me
           </h2>
-          <svg className=" max-xl:hidden absolute top-[-45px] left-[830px] z-0"> { /* watch video */}
+          <svg className=" max-xl:hidden absolute left-[50%] right-[50%] z-0">
             <image height="150" width="130" href={imgabout} />
           </svg>
         </div>
-        <div className=" my-20 flex justify-around items-center ">
+        <div className=" my-20 flex justify-center gap-16 items-center ">
           <div>
             <img src={imgprof} className="rounded-xl max-lg:hidden" width={350} alt="imageBio" />
           </div>
@@ -43,11 +43,11 @@ const About = () => {
             <div className="progress-bar ">
               <div className="flex flex-col max-md:justify-center md:flex-row pb-3 md:items-center">
                 <p className="min-w-[110px] font-medium text-lg">Html & Css</p>
-                <hr className="h-1 w-[75%] rounded-xl bg-gradient-to-r from-[#1d1d9a] to-[#1e98d5] " />
+                <hr className="h-1 w-[90%] rounded-xl bg-gradient-to-r from-[#1d1d9a] to-[#1e98d5] " />
               </div>
               <div className="flex flex-col max-md:justify-center md:flex-row pb-3 md:items-center">
                 <p className="min-w-[110px] font-medium text-lg">Tailwind</p>
-                <hr className="h-1 w-[60%] rounded-xl bg-gradient-to-r from-[#1d1d9a] to-[#1e98d5] " />
+                <hr className="h-1 w-[80%] rounded-xl bg-gradient-to-r from-[#1d1d9a] to-[#1e98d5] " />
               </div>
               <div className="flex flex-col max-md:justify-center md:flex-row pb-3 md:items-center">
                 <p className="min-w-[110px] font-medium text-lg">JavaScript</p>
@@ -56,6 +56,10 @@ const About = () => {
               <div className="flex flex-col max-md:justify-center md:flex-row pb-3 md:items-center">
                 <p className="min-w-[110px] font-medium text-lg">ReactJs</p>
                 <hr className="h-1 w-[80%] rounded-xl bg-gradient-to-r from-[#1d1d9a] to-[#1e98d5] " />
+              </div>
+              <div className="flex flex-col max-md:justify-center md:flex-row pb-3 md:items-center">
+                <p className="min-w-[110px] font-medium text-lg">NextJs</p>
+                <hr className="h-1 w-[50%] rounded-xl bg-gradient-to-r from-[#1d1d9a] to-[#1e98d5] " />
               </div>
             </div>
             <IconContext.Provider value={{ size : "50px"}}>

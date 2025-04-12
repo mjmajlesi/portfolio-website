@@ -29,25 +29,27 @@ function Navbar() {
   const toggleNav = () => setIsNavOpen(!isNavOpen);
 
   return (
-    <div className={`${isNavOpen ? "Navbar" : "mb-24"}`}>
+    <div className={`${isNavOpen ? "Navbar" : "mb-6"}`}>
       <Container>
         <div className="flex flex-col items-start md:flex-row md:items-center md:justify-between mt-5 text-lg">
-          <p className="font-semibold text-2xl ">MJ</p>
-          <div
-            onClick={toggleNav}
-            className="absolute t0p-[0.75rem] right-[1rem] md:hidden flex flex-col justify-between w-[2.25rem] h-[2rem]"
-          >
-            <span className="h-[0.4rem] w-full bg-white rounded-md"></span>
-            <span className="h-[0.4rem] w-full bg-white rounded-md"></span>
-            <span className="h-[0.4rem] w-full bg-white rounded-md"></span>
+          <div className="flex items-center justify-between w-full md:w-auto">
+            <p className="font-semibold text-2xl ">MJ</p>
+            <div
+              onClick={toggleNav}
+              className="md:hidden flex flex-col justify-between w-[2.25rem] h-[2rem]"
+            >
+              <span className="h-[0.4rem] w-full bg-white rounded-md"></span>
+              <span className="h-[0.4rem] w-full bg-white rounded-md"></span>
+              <span className="h-[0.4rem] w-full bg-white rounded-md"></span>
+            </div>
           </div>
+
           <ul
-            className={` ${
-              isNavOpen ? "hidden" : "flex"
-            } md:flex flex-col md:flex-row gap-4 md:gap-10 items-center absolute md:relative top-16 md:top-0 left-0 w-full md:w-auto bg-gray-900 md:bg-transparent p-5 md:p-0`}
+            className={` ${isNavOpen ? "hidden" : "flex"
+              } md:flex flex-col rounded-lg md:flex-row gap-4 w-full mt-5 md:gap-10 items-center bg-gray-900 md:bg-transparent `}
           >
             {navs.map((nav, index) => (
-              <li className="active:text-Blue">
+              <li className="active:text-gray-500 p-1">
                 <AnchorLink
                   key={index}
                   className="anchor-link hover:text-Blue"
