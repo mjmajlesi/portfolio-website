@@ -46,10 +46,10 @@ function Navbar() {
 
           <ul
             className={` ${isNavOpen ? "hidden" : "flex"
-              } md:flex flex-col rounded-lg md:flex-row gap-4 w-full mt-5 md:gap-10 items-center bg-gray-900 md:bg-transparent `}
+              } md:flex flex-col rounded-lg md:flex-row gap-4 w-full ml-5  md:gap-10 items-center bg-gray-900 md:bg-transparent `}
           >
             {navs.map((nav, index) => (
-              <li className="active:text-gray-500 p-1">
+              <li className="active:text-gray-500">
                 <AnchorLink
                   key={index}
                   className="anchor-link hover:text-Blue"

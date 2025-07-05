@@ -1,4 +1,4 @@
-import React, { ComponentProps } from 'react'
+import { ComponentProps } from 'react'
 
 type Tvariant = "dark" | "normal" | "login" | "seccece" | "danger"
 
