@@ -1,9 +1,9 @@
 {
-  "name": "portfoilo-website",
+  "name": "portfolio-website",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://mjmajlesi.github.io/portfoilo-website/",
+  "homepage": "https://mjmajlesi.github.io/portfolio-website/",
   "scripts": {
     "dev": "vite",
     "predeploy": "npm run build",
