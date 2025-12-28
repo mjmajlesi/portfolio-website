@@ -1,5 +1,5 @@
 import { TypeAnimation } from "react-type-animation";
-import profile from "../assets/photo_2024-07-10_04-59-49.jpg";
+import profile from "../assets/Profile.png";
 import Container from './Container';
 import Button from './buttuns';
 import styled from 'styled-components';
@@ -8,7 +8,7 @@ import Navbar from "./Navbar";
 const Header = () => {
 
   const typeanimation = [
-    "front-end Developer with 1 years of experience using ReactJs and .",
+    "front-end Developer with 1 years of experience using ReactJs and NextJs.",
     1000,
   ];
 

@@ -29,7 +29,7 @@ const About = () => {
         </div>
         <div className=" my-20 flex justify-center gap-16 items-center ">
           <div>
-            <img src={imgprof} className="rounded-xl max-lg:hidden" width={350} alt="imageBio" />
+            <img src={imgprof} className="rounded-xl max-lg:hidden" width={500} alt="imageBio" />
           </div>
           <div>
             <p className="w-[350px] md:w-[600px] mb-10 font-medium text-[18px] leading-[26px]">

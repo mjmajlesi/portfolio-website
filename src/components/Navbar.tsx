@@ -5,21 +5,26 @@ import Button from "./buttuns";
 import { Link } from "react-router-dom";
 
 function Navbar() {
+
   const navs = [
     {
-      path: "/",
+      id : 1 ,
+      path: "/portfolio-website",
       name: "Home",
     },
     {
-      path: "#aboutme",
+      id : 2 ,
+      path: "/portfolio-website/#aboutme",
       name: "About me",
     },
     {
-      path: "#content",
+      id: 3,
+      path: "/portfolio-website/#content",
       name: "Content",
     },
     {
-      path: "#work",
+      id : 4,
+      path: "/portfolio-website/#work",
       name: "Work",
     },
   ];
@@ -45,18 +50,19 @@ function Navbar() {
           </div>
 
           <ul
-            className={` ${isNavOpen ? "hidden" : "flex"
-              } md:flex flex-col rounded-lg md:flex-row gap-4 w-full ml-5  md:gap-10 items-center bg-gray-900 md:bg-transparent `}
+            className={` ${
+              isNavOpen ? "hidden" : "flex"
+            } md:flex flex-col rounded-lg md:flex-row gap-4 w-full ml-5  md:gap-10 items-center bg-gray-900 md:bg-transparent `}
           >
             {navs.map((nav, index) => (
               <li className="active:text-gray-500">
                 <AnchorLink
                   key={index}
-                  className="anchor-link hover:text-Blue"
+                  className="anchor-link hover:text-Blue cursor-pointer"
                   offset={50}
                   href={nav.path}
                 >
-                  <Link to={"/"}>{nav.name}</Link>
+                  {nav.name}{" "}
                 </AnchorLink>
               </li>
             ))}
