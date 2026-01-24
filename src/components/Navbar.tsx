@@ -2,79 +2,103 @@ import { useState } from "react";
 import Container from "./Container";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import Button from "./buttuns";
-import { Link } from "react-router-dom";
 
 function Navbar() {
-
   const navs = [
     {
-      id : 1 ,
-      path: "/portfolio-website",
+      id: 1,
+      path: "/",
       name: "Home",
     },
     {
-      id : 2 ,
-      path: "/portfolio-website/#aboutme",
+      id: 2,
+      path: "#aboutme",
       name: "About me",
     },
     {
       id: 3,
-      path: "/portfolio-website/#content",
+      path: "#content",
       name: "Content",
     },
     {
-      id : 4,
-      path: "/portfolio-website/#work",
+      id: 4,
+      path: "#work",
       name: "Work",
     },
   ];
 
-  const [isNavOpen, setIsNavOpen] = useState(true);
+  const [isNavOpen, setIsNavOpen] = useState<boolean>(false);
 
   const toggleNav = () => setIsNavOpen(!isNavOpen);
 
   return (
-    <div className={`${isNavOpen ? "Navbar" : "mb-6"}`}>
-      <Container>
-        <div className="flex flex-col items-start md:flex-row md:items-center md:justify-between mt-5 text-lg">
-          <div className="flex items-center justify-between w-full md:w-auto">
-            <p className="font-semibold text-2xl ">MJ</p>
-            <div
-              onClick={toggleNav}
-              className="md:hidden flex flex-col justify-between w-[2.25rem] h-[2rem]"
-            >
-              <span className="h-[0.4rem] w-full bg-white rounded-md"></span>
-              <span className="h-[0.4rem] w-full bg-white rounded-md"></span>
-              <span className="h-[0.4rem] w-full bg-white rounded-md"></span>
-            </div>
+    <Container>
+      <div className="w-full py-5 mt-4 px-8 ">
+        <div className="flex items-center justify-between">
+          <div>
+            <span className="text-2xl md:text-4xl font-bold">MJ</span>
           </div>
-
-          <ul
-            className={` ${
-              isNavOpen ? "hidden" : "flex"
-            } md:flex flex-col rounded-lg md:flex-row gap-4 w-full ml-5  md:gap-10 items-center bg-gray-900 md:bg-transparent `}
-          >
-            {navs.map((nav, index) => (
-              <li className="active:text-gray-500">
-                <AnchorLink
-                  key={index}
-                  className="anchor-link hover:text-Blue cursor-pointer"
-                  offset={50}
-                  href={nav.path}
+          <div className="hidden md:flex">
+            <ul className="flex flex-row items-center justify-center gap-6">
+              {navs.map((nav) => (
+                <li
+                  key={nav.id}
+                  className="font-medium text-lg md:text-xl hover:scale-105 hover:transition-all hover:duration-300 "
                 >
-                  {nav.name}{" "}
-                </AnchorLink>
-              </li>
-            ))}
-          </ul>
-          <div className="Login max-md:hidden">
-            <Button className=" bg-gradient-to-r from-[#1d1d9a] to-[#1e98d5] transition delay-150 hover:scale-110 ">
-              <Link to={"/login"}>Login</Link>
+                  <AnchorLink href={nav.path}>{nav.name} </AnchorLink>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="hidden md:flex">
+            <Button variant="login" className="px-3 py-4 rounded-xl hover:scale-110 hover:transition-all hover:duration-300  md:text-xl cursor-pointer">
+              Sign In
             </Button>
           </div>
+
+          {/*  mobile screen  */}
+
+          <div className="md:hidden">
+            {isNavOpen ? (
+              <div
+                className="flex flex-row items-center justify-center gap-1 cursor-pointer"
+                onClick={toggleNav}
+              >
+                <div className="bg-white w-1.5 h-8 rounded-full" />
+                <div className="bg-white w-1.5 h-8 rounded-full" />
+                <div className="bg-white w-1.5 h-8 rounded-full" />
+              </div>
+            ) : (
+              <div
+                className="flex flex-col items-center justify-center gap-1 cursor-pointer"
+                onClick={toggleNav}
+              >
+                <div className="bg-white h-1.5 w-8 rounded-full" />
+                <div className="bg-white h-1.5 w-8 rounded-full" />
+                <div className="bg-white h-1.5 w-8 rounded-full" />
+              </div>
+            )}
+          </div>
         </div>
-      </Container>
-    </div>
+
+        <div className="my-3">
+          {isNavOpen && (
+            <div className="w-full">
+              <ul className="flex flex-col items-center justify-center gap-2">
+                {navs.map((nav) => (
+                  <li
+                    key={nav.id}
+                    className="font-medium text-lg hover:scale-105 hover:transition-all hover:duration-300 "
+                  >
+                    <AnchorLink href={nav.path}>{nav.name} </AnchorLink>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+      </div>
+    </Container>
   );
 }
 

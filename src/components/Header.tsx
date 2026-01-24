@@ -4,7 +4,6 @@ import Container from './Container';
 import Button from './buttuns';
 import styled from 'styled-components';
 import { motion } from "framer-motion";
-import Navbar from "./Navbar";
 const Header = () => {
 
   const typeanimation = [
@@ -13,16 +12,15 @@ const Header = () => {
   ];
 
   return (
-    <>
-      <Navbar />
+    <div className="mb-60">
       <Container>
-        <div className='Header flex justify-center flex-col items-center m-24'>
+        <div className='Header flex justify-center flex-col items-center my-24'>
           <StyledImage src={profile} className='rounded-full' width={200} alt="profile" />
           <div className='Header-bio flex items-center justify-center flex-col my-14'>
-            <p className='text-2xl md:text-3xl font-semibold '>
-              <span className=' bg-gradient-to-r from-[#1d1d9a] to-[#1e98d5] bg-clip-text text-3xl md:text-4xl text-transparent'>I'm Mohammad javad Majlesi,</span> front-end Developer from Iran.
+            <p className=' text-[20px] md:text-2xl lg:text-4xl font-semibold '>
+              <span className=' bg-gradient-to-r from-[#1d1d9a] to-[#1e98d5] bg-clip-text text-3xl md:text-4xl lg:text-5xl text-transparent'>I'm Mohammad javad Majlesi,</span> front-end Developer from Iran.
             </p>
-            <p className='text-xl md:text-2xl font-medium pt-10 pb-6'>
+            <p className='text-[20px] md:text-2xl lg:text-3xl font-medium pt-10 pb-6'>
               <TypeAnimation
                 sequence={typeanimation}
                 speed={50}
@@ -39,11 +37,11 @@ const Header = () => {
             }}
             viewport={{ once: true, amount: 0.5 }}
             className='header-button flex items-center gap-4 md:gap-8'>
-            <Button variant='normal' className='p-3 md:p-4 text-sm md:text-base rounded-2xl'>
+            <Button variant='normal' className='p-3 md:p-4 text-base md:text-lg rounded-2xl'>
               connect with me
             </Button>
             <a href="/Resume.pdf" download>
-              <Button className='p-4 active:rounded-2xl active:border-2 hover:border-[#1e98d5]'>
+              <Button className='p-4 active:rounded-2xl text-base md:text-lg active:border-2 hover:border-[#1e98d5]'>
                 my resume
               </Button>
             </a>
@@ -53,7 +51,7 @@ const Header = () => {
           <DivbotBlur />
         </div>
       </Container>
-    </>
+    </div>
   )
 }
 
