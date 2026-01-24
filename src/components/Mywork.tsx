@@ -12,25 +12,26 @@ const Mywork = () => {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 100 }}
+      initial={{ opacity: 0, y: 50 }}
       whileInView={{
         opacity: 1,
-        y: 50,
+        y: 100,
         transition: { delay: 0.2, duration: 0.6 },
       }}
-      viewport={{ once: false, amount: 0.5 }}
+      viewport={{ once: true, amount: 0.5 }}
       id="work"
+      className="my-60"
     >
       <Container>
         <div className="title-work relative flex flex-col items-center justify-center">
           <h2 className="text-4xl z-10 font-medium">My Work</h2>
-          <svg className=" max-xl:hidden absolute top-[-45px] left-[830px] z-0">
+          <svg className=" max-2xl:hidden absolute top-[-45px] left-[650px] z-0">
             {" "}
             {/* watch video */}
             <image height={150} width={130} href={imgwork} />
           </svg>
         </div>
-        <div className="work my-24 grid grid-cols-2 grid-rows-2 justify-items-center">
+        <div className="work my-24 grid grid-cols-1 2xl:grid-cols-2 justify-items-center gap-16">
           <div className="flex flex-col items-center justify-center w-[300px] md:w-[600px]">
             <ImgHover src={image1} alt="project1" />
             <h3 className="text-2xl font-semibold my-7">Store Website</h3>

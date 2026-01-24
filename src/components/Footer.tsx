@@ -8,14 +8,14 @@ const Footer = () => {
     <div>
       <Container>
         <div className="flex items-center gap-10 lg:justify-between mb-5">
-          <div className="flex flex-col items-start justify-start w-[200px] lg:w-[600px] pr-3">
+          <div className="flex flex-col items-start justify-start lg:w-[600px] pr-3">
             <span className="text-4xl font-semibold my-3">MJ</span>
-            <p className=" max-md:text-sm md:font-medium">
+            <p className=" max-md:text-base md:font-medium">
               I am 19 years old and was born in Isfahan. I am currently a
               computer engineering student at Hamedan University of Technology.
             </p>
           </div>
-          <div className="w-[100px] lg:w-[450px] flex items-center gap-5 mt-9">
+          <div className="w-[100px] lg:w-[450px] md:flex items-center gap-5 mt-9 hidden">
             <input
               type="search"
               className="w-[100px] lg:w-[400px] h-9 bg-slate-600 rounded-lg p-3 focus:outline-none focus:outline-[#1e98d5]"

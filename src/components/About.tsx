@@ -16,7 +16,7 @@ const About = () => {
         y: 1,
         transition: { delay: 0.2, duration: 0.6 },
     }}
-    viewport={{ once: false, amount: 0.5 }}
+    viewport={{ once: true, amount: 0.5 }}
     id="aboutme">
       <Container>
         <div className=" relative head-about flex flex-col items-center justify-center">
@@ -27,7 +27,7 @@ const About = () => {
             <image height="150" width="130" href={imgabout} />
           </svg>
         </div>
-        <div className=" my-20 flex justify-center gap-16 items-center ">
+        <div className=" my-20 flex flex-col 2xl:flex-row justify-center gap-16 items-center ">
           <div>
             <img src={imgprof} className="rounded-xl max-lg:hidden" width={500} alt="imageBio" />
           </div>
