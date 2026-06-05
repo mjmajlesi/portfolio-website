@@ -3,33 +3,42 @@ import Container from "./Container";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import Button from "./buttuns";
 
-function Navbar() {
-  const navs = [
-    {
-      id: 1,
-      path: "/",
-      name: "Home",
-    },
-    {
-      id: 2,
-      path: "#aboutme",
-      name: "About me",
-    },
-    {
-      id: 3,
-      path: "#content",
-      name: "Content",
-    },
-    {
-      id: 4,
-      path: "#work",
-      name: "Work",
-    },
-  ];
+// Move navs to module scope so it's created once, not rebuilt every render
+const NAVS = [
+  {
+    id: 1,
+    path: "/",
+    name: "Home",
+  },
+  {
+    id: 2,
+    path: "#aboutme",
+    name: "About me",
+  },
+  {
+    id: 3,
+    path: "#content",
+    name: "Content",
+  },
+  {
+    id: 4,
+    path: "#work",
+    name: "Work",
+  },
+];
 
+function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState<boolean>(false);
 
   const toggleNav = () => setIsNavOpen(!isNavOpen);
+
+  // Handle keyboard activation for accessibility
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      toggleNav();
+    }
+  };
 
   return (
     <Container>
@@ -40,7 +49,7 @@ function Navbar() {
           </div>
           <div className="hidden md:flex">
             <ul className="flex flex-row items-center justify-center gap-6">
-              {navs.map((nav) => (
+              {NAVS.map((nav) => (
                 <li
                   key={nav.id}
                   className="font-medium text-lg md:text-xl hover:scale-105 hover:transition-all hover:duration-300 "
@@ -63,6 +72,9 @@ function Navbar() {
               <div
                 className="flex flex-row items-center justify-center gap-1 cursor-pointer"
                 onClick={toggleNav}
+                onKeyDown={handleKeyDown}
+                role="button"
+                tabIndex={0}
               >
                 <div className="bg-white w-1.5 h-8 rounded-full" />
                 <div className="bg-white w-1.5 h-8 rounded-full" />
@@ -72,6 +84,9 @@ function Navbar() {
               <div
                 className="flex flex-col items-center justify-center gap-1 cursor-pointer"
                 onClick={toggleNav}
+                onKeyDown={handleKeyDown}
+                role="button"
+                tabIndex={0}
               >
                 <div className="bg-white h-1.5 w-8 rounded-full" />
                 <div className="bg-white h-1.5 w-8 rounded-full" />
@@ -85,7 +100,7 @@ function Navbar() {
           {isNavOpen && (
             <div className="w-full">
               <ul className="flex flex-col items-center justify-center gap-2">
-                {navs.map((nav) => (
+                {NAVS.map((nav) => (
                   <li
                     key={nav.id}
                     className="font-medium text-lg hover:scale-105 hover:transition-all hover:duration-300 "

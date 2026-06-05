@@ -10,7 +10,8 @@
     "deploy": "gh-pages -d dist",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "doctor": "npx react-doctor@latest"
   },
   "dependencies": {
     "axios": "^1.7.9",
@@ -37,6 +38,7 @@
     "gh-pages": "^6.3.0",
     "globals": "^15.13.0",
     "postcss": "^8.4.49",
+    "react-doctor": "^0.4.0",
     "tailwindcss": "^3.4.17",
     "typescript": "~5.6.2",
     "typescript-eslint": "^8.18.1",

@@ -1,5 +1,4 @@
 import Container from "./Container";
-import imgabout from '../assets/download.svg';
 import { FaCss3, FaHtml5, FaReact } from "react-icons/fa";
 import { IconContext } from "react-icons";
 import { RiTailwindCssFill } from "react-icons/ri";
@@ -20,19 +19,16 @@ const About = () => {
     id="aboutme">
       <Container>
         <div className=" relative head-about flex flex-col items-center justify-center">
-          <h2 className="text-4xl font-medium z-10 ">
+          <h2 className="text-3xl xl:text-5xl font-medium z-10 ">
             About me
           </h2>
-          <svg className=" max-xl:hidden absolute left-[50%] right-[50%] z-0">
-            <image height="150" width="130" href={imgabout} />
-          </svg>
         </div>
-        <div className=" my-20 flex flex-col 2xl:flex-row justify-center gap-16 items-center ">
+        <div className=" my-20 flex flex-col 2xl:flex-row justify-center gap-8 md:gap-16 items-center ">
           <div>
             <img src={imgprof} className="rounded-xl max-lg:hidden" width={500} alt="imageBio" />
           </div>
-          <div>
-            <p className="w-[350px] md:w-[600px] mb-10 font-medium text-[18px] leading-[26px]">
+          <div className="w-full px-4 sm:px-6">
+            <p className="mb-10 font-medium text-[18px] leading-[26px]">
             I am Highly motivated front-end developer with a strong desire to learn 
             and grow. With 1 year of expertise in building websites and projects. 
             I think the most important thing about me is that I am a fast learner

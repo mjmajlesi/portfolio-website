@@ -7,28 +7,28 @@ const Footer = () => {
   return (
     <div>
       <Container>
-        <div className="flex items-center gap-10 lg:justify-between mb-5">
-          <div className="flex flex-col items-start justify-start lg:w-[600px] pr-3">
+        <div className="flex flex-col lg:flex-row items-center gap-10 lg:justify-between mb-5">
+          <div className="flex flex-col items-start justify-start w-full lg:w-[600px]">
             <span className="text-4xl font-semibold my-3">MJ</span>
-            <p className=" max-md:text-base md:font-medium">
+            <p className="text-base md:text-sm md:font-medium">
               I am 19 years old and was born in Isfahan. I am currently a
               computer engineering student at Hamedan University of Technology.
             </p>
           </div>
-          <div className="w-[100px] lg:w-[450px] md:flex items-center gap-5 mt-9 hidden">
+          <div className="w-full lg:w-auto flex items-center gap-5">
             <input
               type="search"
-              className="w-[100px] lg:w-[400px] h-9 bg-slate-600 rounded-lg p-3 focus:outline-none focus:outline-[#1e98d5]"
+              className="flex-1 lg:w-[400px] h-9 bg-slate-600 rounded-lg p-3 focus:outline-none focus:outline-[#1e98d5]"
               placeholder="Search..."
             />
-            <Button className=" rounded-lg bg-gradient-to-r from-[#1d1d9a] to-[#1e98d5] transition delay-150 hover:scale-110">
+            <Button className="rounded-lg bg-gradient-to-r from-[#1d1d9a] to-[#1e98d5] text-white transition delay-150 hover:scale-110 px-4 py-2 text-sm md:text-base">
               Search
             </Button>
           </div>
         </div>
         <hr />
-        <div className="flex items-center gap-10 lg:justify-between mt-5">
-          <span className="max-md:text-xs md:font-semibold">
+        <div className="flex flex-col md:flex-row items-center gap-5 lg:justify-between mt-5">
+          <span className="text-xs md:text-sm md:font-semibold text-center md:text-left">
             © 2024 Copyright: Mohammad Javad Majlesi
           </span>
           <IconContext.Provider value={{ size: "30px" }}>

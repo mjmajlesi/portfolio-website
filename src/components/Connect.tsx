@@ -1,4 +1,3 @@
-import imgconnect from "../assets/download.svg" ;
 import styled from 'styled-components';
 import { IoCall } from 'react-icons/io5';
 import { MdEmail } from 'react-icons/md';
@@ -20,16 +19,13 @@ const Connect = () => {
     viewport={{ once: true, amount: 0.5 }}
     id='content'>
       <div className='title-connect relative flex flex-col items-center mb-20'>
-        <h2 className='text-4xl font-medium z-10'>Content with me</h2>
-        <svg className=" max-xl:hidden absolute top-[-45px] left-[990px] z-0"> {/* watch video */}
-        <image height={150} width={130} href={imgconnect} />
-        </svg>
+        <h2 className='text-3xl xl:text-5xl font-medium z-10'>Connect with me</h2>
       </div>
       <Container>
-      <div className='flex flex-col md:flex-row justify-center items-center md:justify-around mb-32'>
-        <div className='flex flex-col justify-center items-start gap-9 mb-40 w-full'>
-          <h3 className='text-4xl font-semibold bg-gradient-to-r from-[#1d1d9a] to-[#1e98d5] bg-clip-text max-md:text-center max-md:w-full text-transparent'>Lets talk...</h3>
-          <p className='text-lg my-4 not-md:text-center'>
+      <div className='flex flex-col lg:flex-row justify-center items-center lg:justify-around gap-8 mb-20 lg:mb-32'>
+        <div className='flex flex-col justify-center items-start gap-9 w-full lg:w-auto'>
+          <h3 className='text-3xl md:text-4xl font-semibold bg-gradient-to-r from-[#1d1d9a] to-[#1e98d5] bg-clip-text text-center lg:text-left w-full lg:w-auto text-transparent'>Lets talk...</h3>
+          <p className='text-lg text-center lg:text-left'>
           I would be happy if I could collaborate on a new project or be hired by a company (remotely). Contact information :
           </p>
           <IconContext.Provider value={{ size : "35px"}}>
@@ -50,7 +46,7 @@ const Connect = () => {
           </IconContext.Provider>
 
         </div>
-        <div className="w-full flex flex-col items-center justify-center lg:items-start">
+        <div className="w-full lg:w-1/2 flex flex-col items-center justify-center px-4 sm:px-6">
           <label htmlFor="Name" className='block mb-4 font-medium'>Your name :</label>
           <input type="text" id='Name' className='w-full h-10 bg-slate-700 mb-7 rounded-lg p-4 focus:outline-none focus:outline-[#1e98d5] ' placeholder='Name...' />
           <label htmlFor="Email" className='block mb-4 font-medium'>Your email :</label>

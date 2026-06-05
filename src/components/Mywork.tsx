@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import imgwork from "../assets/download.svg";
 import image1 from "../assets/image1.png";
 import image2 from "../assets/image2.png";
 import image3 from "../assets/image3.png";
@@ -10,12 +9,20 @@ import { useState } from "react";
 const Mywork = () => {
   const [Open, SetOpen] = useState<boolean>(false);
 
+  // Handle keyboard activation for accessibility
+  const handleToggleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      SetOpen(!Open);
+    }
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
       whileInView={{
         opacity: 1,
-        y: 100,
+        y: 1,
         transition: { delay: 0.2, duration: 0.6 },
       }}
       viewport={{ once: true, amount: 0.5 }}
@@ -24,15 +31,10 @@ const Mywork = () => {
     >
       <Container>
         <div className="title-work relative flex flex-col items-center justify-center">
-          <h2 className="text-4xl z-10 font-medium">My Work</h2>
-          <svg className=" max-2xl:hidden absolute top-[-45px] left-[650px] z-0">
-            {" "}
-            {/* watch video */}
-            <image height={150} width={130} href={imgwork} />
-          </svg>
+          <h2 className="text-3xl xl:text-5xl z-10 font-medium">My Work</h2>
         </div>
-        <div className="work my-24 grid grid-cols-1 2xl:grid-cols-2 justify-items-center gap-16">
-          <div className="flex flex-col items-center justify-center w-[300px] md:w-[600px]">
+        <div className="work my-24 grid grid-cols-1 md:grid-cols-2 justify-items-center gap-8 md:gap-12 lg:gap-16">
+          <div className="flex flex-col items-center justify-center w-full px-4 sm:px-6 max-w-2xl">
             <ImgHover src={image1} alt="project1" />
             <h3 className="text-2xl font-semibold my-7">Store Website</h3>
             <p className="text-xl font-medium">
@@ -41,15 +43,15 @@ const Mywork = () => {
               framework, and Material UI.
             </p>
             <a
-              className=" text-center my-3 text-xl font-medium bg-gradient-to-r from-[#1d1d9a] to-[#1e98d5] text-white px-4 py-3 rounded-xl text-transparent"
+              className="text-center my-3 text-xl font-medium bg-gradient-to-r from-[#1d1d9a] to-[#1e98d5] text-white px-4 py-3 rounded-xl hover:opacity-90 transition"
               href="https://github.com/mjmajlesi/storeWebsite"
               target="_blank"
             >
               info more
             </a>
           </div>
-          <div className="flex flex-col items-center justify-center w-[300px] md:w-[600px]">
-            <ImgHover src={image3} alt="project1" />
+          <div className="flex flex-col items-center justify-center w-full px-4 sm:px-6 max-w-2xl">
+            <ImgHover src={image3} alt="project3" />
             <h3 className="text-2xl font-semibold my-7">Forooghteb Website</h3>
             <div>
               <p
@@ -68,20 +70,23 @@ const Mywork = () => {
               </p>{" "}
               <span
                 onClick={() => SetOpen(!Open)}
+                onKeyDown={handleToggleKeyDown}
+                role="button"
+                tabIndex={0}
                 className="text-lg font-medium bg-gradient-to-r from-[#1d1d9a] to-[#1e98d5] bg-clip-text text-transparent cursor-pointer"
               >
                 {Open == false ? "Read More..." : "Back"}
               </span>
             </div>
             <a
-              className=" text-center my-3 text-xl font-medium bg-gradient-to-r from-[#1d1d9a] to-[#1e98d5] text-white px-4 py-3 rounded-xl text-transparent"
+              className="text-center my-3 text-xl font-medium bg-gradient-to-r from-[#1d1d9a] to-[#1e98d5] text-white px-4 py-3 rounded-xl hover:opacity-90 transition"
               href="https://forooghteb.ir/"
               target="_blank"
             >
               info more
             </a>
           </div>
-          <div className="flex flex-col items-center justify-center w-[300px] md:w-[600px]">
+          <div className="flex flex-col items-center justify-center w-full px-4 sm:px-6 max-w-2xl md:col-span-2 lg:col-span-1">
             <ImgHover src={image2} alt="project2" />
             <h3 className="text-2xl font-semibold my-7">Recipe Website</h3>
             <p className="text-xl font-medium">
@@ -90,7 +95,7 @@ const Mywork = () => {
               framework and Lottiefiles animations. <br />
             </p>
             <a
-              className=" text-center my-3 text-xl font-medium bg-gradient-to-r from-[#1d1d9a] to-[#1e98d5] text-white px-4 py-3 rounded-xl text-transparent"
+              className="text-center my-3 text-xl font-medium bg-gradient-to-r from-[#1d1d9a] to-[#1e98d5] text-white px-4 py-3 rounded-xl hover:opacity-90 transition"
               href="https://github.com/mjmajlesi/resipe-website"
               target="_blank"
             >

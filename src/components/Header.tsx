@@ -4,25 +4,26 @@ import Container from './Container';
 import Button from './buttuns';
 import styled from 'styled-components';
 import { motion } from "framer-motion";
+
+// Move typeanimation to module scope so it's created once, not rebuilt every render
+const TYPE_ANIMATION_SEQUENCE = [
+  "front-end Developer with 1 years of experience using ReactJs and NextJs.",
+  1000,
+];
+
 const Header = () => {
-
-  const typeanimation = [
-    "front-end Developer with 1 years of experience using ReactJs and NextJs.",
-    1000,
-  ];
-
   return (
     <div className="mb-60">
       <Container>
         <div className='Header flex justify-center flex-col items-center my-24'>
           <StyledImage src={profile} className='rounded-full' width={200} alt="profile" />
           <div className='Header-bio flex items-center justify-center flex-col my-14'>
-            <p className=' text-[20px] md:text-2xl lg:text-4xl font-semibold '>
-              <span className=' bg-gradient-to-r from-[#1d1d9a] to-[#1e98d5] bg-clip-text text-3xl md:text-4xl lg:text-5xl text-transparent'>I'm Mohammad javad Majlesi,</span> front-end Developer from Iran.
+            <p className=' max-md:text-center text-[20px] md:text-2xl lg:text-4xl font-semibold '>
+              <span className=' bg-gradient-to-r from-[#1d1d9a] to-[#1e98d5] bg-clip-text text-2xl md:text-4xl lg:text-5xl text-transparent'>I'm Mohammad javad Majlesi,</span> front-end Developer from Iran.
             </p>
-            <p className='text-[20px] md:text-2xl lg:text-3xl font-medium pt-10 pb-6'>
+            <p className='text-[20px] md:text-2xl max-md:text-center lg:text-3xl font-medium pt-10 pb-6'>
               <TypeAnimation
-                sequence={typeanimation}
+                sequence={TYPE_ANIMATION_SEQUENCE}
                 speed={50}
                 repeat={Infinity}
               />
@@ -92,7 +93,6 @@ export const DivbotBlur = styled.div`
     position: absolute;
     width: 20vw;
     height: 20vw;
-    min-width: 350px;
     min-width: 250px;
     bottom: 0px;
     right: 0vw;
@@ -100,6 +100,6 @@ export const DivbotBlur = styled.div`
     background: rgba(25 , 55 , 109 , 0.7);
     filter: blur(100px);
     z-index: 0;
-`
+`;
 
-export default Header
+export default Header;
